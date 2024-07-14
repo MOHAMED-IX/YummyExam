@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <title>Yummy</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- Style -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+
+    <!-- loader -->
+    <div class="loading-screen d-none position-fixed d-flex top-0 start-0 end-0 bottom-0 bg-black justify-content-center align-items-center">
+      <div class="loader"></div>
+    </div>
+
+    <div class="side-nav-menu min-vh-100 position-fixed d-flex top-0">
+      <div class="nav-tab bg-black text-white d-flex justify-content-between flex-column p-4 min-vh-100 ">
+        <div class="links">
+          <ul class="list-unstyled overflow-hidden">
+            <li class="py-2 position-relative cursor-pointer" onclick="showSearchInputs(); closeSideNav()">Search</li>
+            <li class="py-2 position-relative cursor-pointer" onclick="getCategories(); closeSideNav()">Categories</li>
+            <li class="py-2 position-relative cursor-pointer" onclick="getArea(); closeSideNav()">Area</li>
+            <li class="py-2 position-relative cursor-pointer" onclick="getIngredients(); closeSideNav()">Ingredients</li>
+            <li class="py-2 position-relative cursor-pointer">Contact Us</li>
+          </ul>
+        </div>
+        <div class="nav-footer">
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f px-2"></i>
+            <i class="fa-brands fa-twitter px-2"></i>
+            <i class="fa-brands fa-instagram px-2"></i>
+          </div>
+          <div class="copyright">
+            <p class="py-3">Copyright © 2022 Yummy. <br/> All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+      <div class="nav-header bg-white text-black d-flex justify-content-between flex-column py-4 px-2 text-center">
+        <img src="./images/logo.png" class="logo" alt="">
+        <i id="openNavBtn" class="fa-solid open-close-icon fa-align-justify fa-2x cursor-pointer"></i>
+        <div>
+          <i class="fa-solid fa-globe d-block cursor-pointer py-2"></i>
+          <i class="fa-solid fa-share-nodes cursor-pointer py-2"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="container w-75" id="searchContainer">
+
+    </div>
+
+    <div class="min-vh-100 position-relative">
+      <div class="inner-loading-screen position-absolute bg-black d-flex top-0 start-0 end-0 bottom-0 justify-content-center align-items-center d-none">
+        <div class="loader"></div>
+      </div>
+      
+  
+      <div class="container">
+          <div class="row py-5 g-4" id="rowData">
+              
+          </div>
+      </div>
+  </div>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
